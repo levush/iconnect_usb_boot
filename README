@@ -39,8 +39,18 @@ presumably already know what to do.
 
 3. Download and run the setup script
 
+
+IF YOU WANT TO JUST MODIFY THE iconnect to boot from a usb stick (debian, arch, xBSD?) 
 cd /tmp
-wget --no-check-certificate https://raw.github.com/igors/iconnect_usb_boot/master/iconnect_install.sh
+wget --no-check-certificate https://raw.github.com/levush/iconnect_usb_boot/master/iconnect_usb_boot_only.sh
+chmod +x iconnect_usb_boot_only.sh
+./iconnect_usb_boot_only.sh
+
+
+
+IF YOU WANT TO INSTALL ARCH FOR KIRWOOD ARM
+cd /tmp
+wget --no-check-certificate https://raw.github.com/levush/iconnect_usb_boot/master/iconnect_install.sh
 chmod +x iconnect_install.sh
 ./iconnect_install.sh
 
