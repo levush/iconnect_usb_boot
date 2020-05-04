@@ -73,7 +73,7 @@ WGET_OPTS=" -c "
 
 
 NO_UBOOT=0
-NO_ARCH=0
+NO_ARCH=1
 NO_MD5=0
 USE_EXT3=0
 SET_ARC_NUMBER=0
@@ -83,11 +83,9 @@ DRIVE_FORMATTED=0
 
 function usage
 {
-    echo "Usage: $0 [--no-uboot] [--no-arch] [--no-md5] [--ext3] [--set-arcNumber] [--reset-arcNumber]"
+    echo "Usage: $0 [--no-uboot] [--no-md5] [--set-arcNumber] [--reset-arcNumber]"
     echo "--no-uboot: do not update u-boot's environment."
-    echo "--no-arch: do not install Arch Linux"
     echo "--no-md5: do not verify MD5 of downloaded Arch Linux tarball"
-    echo "--ext3: format the USB storage as ext3 instead of ext2 (use this option when installing Arch to a hard drive)"
     echo "--set-arcNumber: set arcNumber to 2870 to use all iConnect features on Arch"
     echo "--reset-arcNumber: reset arcNumber back to the stock value of 1682"
 }
@@ -414,9 +412,9 @@ do
         --no-uboot)
             NO_UBOOT=1
             ;;
-        --no-arch)
-            NO_ARCH=1
-            ;;
+#        --no-arch)
+#            NO_ARCH=1
+#            ;;
         --no-md5)
             NO_MD5=1
             ;;
